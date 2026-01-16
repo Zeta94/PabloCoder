@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #17518b; 
+    color: #333;
+}
+
+
+/* HEADER */
+
+.header {
+    background: #ffffff; 
+    padding: 20px;
+    color: #ffd000; 
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #ffd000;
+}
+
+.nav a {
+    color: #ffd000;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+}
+
+/* HOME */
+
+.about {
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    margin-bottom: 25px;
+}
+
+/* BOTONES */
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #ffd000; 
+    color: #17518b;      
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #e6c000;
+}
+
+/* BOTÓN VOLVER */
+.btn-back {
+    background: #17518b;
+    color: #ffd000;
+    border: 2px solid #ffd000;
+}
+
+.btn-back:hover {
+    background: #123c68;
+}
+
+
+/* CATALOGO */
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.img-placeholder {
+    background: #e0e0e0;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* DETALLE */
+
+.video-placeholder {
+    height: 250px;
+    background: #dadada;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.galeria {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.mini-img {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border: 1px solid #aaa;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: #ffd000; 
+    text-align: center;
+    font-size: 14px;
+    color: #17518b;     
+    font-weight: bold;
+}
+
+/* BOTÓN VOLVER */
+.btn-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #17518b;
+}
+
+.btn-back:hover {
+    background: #222;
+}
+
+/* LOGO HOME */
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 750px; 
+    width: 100%;
+    height: auto;
+}
+
+.img-container {
+    width: 300px;
+    height: 180px;
+    flex-shrink: 0;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.minilogo {
+    max-width: 250px; 
+    width: 100%;
+    height: auto;
+}
+
+/* GALERIA AUTO */
+.galeria-auto{
+    margin-bottom: 30px;
+}
+
+.galeria-auto input {
+    display: none;
+}
+
+/* IMAGEN PRINCIPAL */
+.imagen-principal{
+    width: 100%;
+    height: 350px;
+    border: 3px solid #ffd000;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.imagen-principal .img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/* Mostrar según radio */
+#img1:checked ~ .imagen-principal .img1,
+#img2:checked ~ .imagen-principal .img2,
+#img3:checked ~ .imagen-principal .img3,
+#img4:checked ~ .imagen-principal .img4 {
+    display: block;
+}
+
+/* MINIATURAS */
+.miniaturas{
+    display: flex;
+    gap: 10px;
+}
+
+.miniaturas img{
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px solid #ffd000;
+    cursor: pointer;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav a {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 200px;
+    }
+
+    .imagen-principal {
+        height: 250px;
+    }
+}
